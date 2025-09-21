@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/sign-translate/server/main.server.mjs",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "dist/sign-translate/browser/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/sign-translate/server/main.server.mjs"
+    }
+  ]
+}

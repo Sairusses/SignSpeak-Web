@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/sign-translate/server/main.server.mjs",
+      "src": "dist/sign-translate/server/server.mjs",
       "use": "@vercel/node"
     },
     {
@@ -13,7 +13,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/sign-translate/server/main.server.mjs"
+      "dest": "dist/sign-translate/server/server.mjs"
     }
   ]
 }

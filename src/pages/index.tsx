@@ -6,9 +6,6 @@ import { motion } from "framer-motion";
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-100 text-gray-800">
-      {/* Navbar */}
-
-
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-20">
         <motion.div
@@ -98,11 +95,6 @@ export default function HomePage() {
         </Button>
       </section>
 
-      {/* Footer */}
-      <footer className="py-6 text-center text-gray-500 text-sm bg-white">
-        © {new Date().getFullYear()} SignSpeak — Empowering Inclusive
-        Communication
-      </footer>
     </main>
   );
 }

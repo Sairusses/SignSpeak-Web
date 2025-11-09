@@ -11,6 +11,11 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Brand */}
         <Link className="flex items-center gap-2" to="/">
+          <img
+            alt="SignSpeak Logo"
+            className="w-8 h-8 md:w-10 md:h-10 object-contain"
+            src="/logo.svg"
+          />
           <h1 className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent tracking-tight">
             SignSpeak
           </h1>

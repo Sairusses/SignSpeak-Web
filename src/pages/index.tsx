@@ -10,7 +10,7 @@ export default function HomePage() {
     initial: { opacity: 0, y: 40 },
     animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: -40 },
-    transition: { duration: 0.5, ease: "easeOut" }
+    transition: { duration: 0.5, ease: "easeOut" },
   };
 
   const pages = [
@@ -20,17 +20,33 @@ export default function HomePage() {
         <section className="flex flex-col items-center justify-center text-center px-4 sm:px-8 md:px-16 h-[70vh]">
           <motion.div {...phoneAnimation}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-blue-700 mb-4 sm:mb-6">
-              Bridging Communication with <span className="text-blue-500">AI</span>
+              Bridging Communication with{" "}
+              <span className="text-blue-500">AI</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-md sm:max-w-2xl mx-auto">
-              SignSpeak translates sign language into text and speech — enabling communication without barriers.
+              SignSpeak translates sign language into text and speech — enabling
+              communication without barriers.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
               <Link to="/download">
-                <Button color="primary" radius="lg" size="md" className="w-full sm:w-auto">Get SignSpeak</Button>
+                <Button
+                  className="w-full sm:w-auto"
+                  color="primary"
+                  radius="lg"
+                  size="md"
+                >
+                  Get SignSpeak
+                </Button>
               </Link>
               <Link to="/about">
-                <Button radius="lg" size="md" variant="bordered" className="w-full sm:w-auto">Learn More</Button>
+                <Button
+                  className="w-full sm:w-auto"
+                  radius="lg"
+                  size="md"
+                  variant="bordered"
+                >
+                  Learn More
+                </Button>
               </Link>
             </div>
           </motion.div>
@@ -42,20 +58,23 @@ export default function HomePage() {
       content: (
         <section className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 px-4 sm:px-8 md:px-16 h-[75vh] text-center sm:text-left">
           <motion.div {...phoneAnimation} className="max-w-md">
-            <h3 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4">Sign-To-Text Translation</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4">
+              Sign-To-Text Translation
+            </h3>
             <p className="text-base sm:text-lg text-gray-600 mb-3 sm:mb-4">
-              Convert sign gestures into readable text instantly using AI-powered tracking.
+              Convert sign gestures into readable text instantly using
+              AI-powered tracking.
             </p>
           </motion.div>
           <motion.img
-            initial={{ opacity: 0, y: 40, rotate: -10 }}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
-            exit={{ opacity: 0, y: -40, rotate: 10 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            src="/sign-to-text.png"
             alt="Sign to Text Screenshot"
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
             className="w-36 sm:w-48 max-w-[150px] sm:max-w-full select-none pointer-events-none"
+            exit={{ opacity: 0, y: -40, rotate: 10 }}
+            initial={{ opacity: 0, y: 40, rotate: -10 }}
             loading="lazy"
+            src="/sign-to-text.png"
+            transition={{ duration: 0.6, ease: "easeOut" }}
           />
         </section>
       ),
@@ -64,21 +83,27 @@ export default function HomePage() {
       id: 2,
       content: (
         <section className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 px-4 sm:px-8 md:px-16 h-[75vh] text-center sm:text-left">
-          <motion.div {...phoneAnimation} className="max-w-md order-2 sm:order-1">
-            <h3 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4">Text-To-Sign Translation</h3>
+          <motion.div
+            {...phoneAnimation}
+            className="max-w-md order-2 sm:order-1"
+          >
+            <h3 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4">
+              Text-To-Sign Translation
+            </h3>
             <p className="text-base sm:text-lg text-gray-600 mb-3 sm:mb-4">
-              Enter text and watch it translated to sign language using our animated avatar.
+              Enter text and watch it translated to sign language using our
+              animated avatar.
             </p>
           </motion.div>
           <motion.img
-            initial={{ opacity: 0, y: 40, rotate: -10 }}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
-            exit={{ opacity: 0, y: -40, rotate: 10 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            src="/text-to-sign.png"
             alt="Text To Sign Screenshot"
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
             className="w-36 sm:w-48 max-w-[150px] sm:max-w-full select-none pointer-events-none"
+            exit={{ opacity: 0, y: -40, rotate: 10 }}
+            initial={{ opacity: 0, y: 40, rotate: -10 }}
             loading="lazy"
+            src="/text-to-sign.png"
+            transition={{ duration: 0.6, ease: "easeOut" }}
           />
         </section>
       ),
@@ -88,26 +113,28 @@ export default function HomePage() {
       content: (
         <section className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 px-4 sm:px-8 md:px-16 h-[75vh] text-center sm:text-left">
           <motion.div {...phoneAnimation} className="max-w-md">
-            <h3 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4">Sign Language Library</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4">
+              Sign Language Library
+            </h3>
             <p className="text-base sm:text-lg text-gray-600 mb-3 sm:mb-4">
-              Learn and browse categorized sign language gestures for education and practice.
+              Learn and browse categorized sign language gestures for education
+              and practice.
             </p>
           </motion.div>
           <motion.img
-            initial={{ opacity: 0, y: 40, rotate: -10 }}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
-            exit={{ opacity: 0, y: -40, rotate: 10 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            src="/library.png"
             alt="Library Screenshot"
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
             className="w-36 sm:w-48 max-w-[150px] sm:max-w-full select-none pointer-events-none"
+            exit={{ opacity: 0, y: -40, rotate: 10 }}
+            initial={{ opacity: 0, y: 40, rotate: -10 }}
             loading="lazy"
+            src="/library.png"
+            transition={{ duration: 0.6, ease: "easeOut" }}
           />
         </section>
       ),
     },
   ];
-
 
   const handleDragEnd = (_: any, info: any) => {
     if (info.offset.x < -50 && page < pages.length - 1) setPage(page + 1);
@@ -121,14 +148,14 @@ export default function HomePage() {
           <motion.div
             key={page}
             animate={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: 50 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.4 }}
+            className="w-full cursor-grab active:cursor-grabbing"
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.2}
+            exit={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: 50 }}
+            transition={{ duration: 0.4 }}
             onDragEnd={handleDragEnd}
-            className="w-full cursor-grab active:cursor-grabbing"
           >
             {pages[page].content}
           </motion.div>
@@ -146,10 +173,21 @@ export default function HomePage() {
       </div>
 
       <section className="text-center py-16 w-full bg-blue-600 text-white px-4 sm:px-8">
-        <h3 className="text-2xl sm:text-3xl font-bold mb-4">Start Connecting Today</h3>
-        <p className="text-base sm:text-lg mb-8 opacity-90">Experience communication without barriers.</p>
+        <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+          Start Connecting Today
+        </h3>
+        <p className="text-base sm:text-lg mb-8 opacity-90">
+          Experience communication without barriers.
+        </p>
         <Link to="/download">
-          <Button color="primary" size="lg" variant="shadow" className="w-full sm:w-auto">Download App</Button>
+          <Button
+            className="w-full sm:w-auto"
+            color="primary"
+            size="lg"
+            variant="shadow"
+          >
+            Download App
+          </Button>
         </Link>
       </section>
     </main>

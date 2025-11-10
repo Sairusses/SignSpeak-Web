@@ -54,7 +54,7 @@ export default function HomePage() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             src="/sign-to-text.png"
             alt="Sign to Text Screenshot"
-            className="w-3/4 sm:w-48 max-w-xs sm:max-w-full select-none pointer-events-none"
+            className="w-36 sm:w-48 max-w-[150px] sm:max-w-full select-none pointer-events-none"
             loading="lazy"
           />
         </section>
@@ -77,7 +77,7 @@ export default function HomePage() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             src="/text-to-sign.png"
             alt="Text To Sign Screenshot"
-            className="w-3/4 sm:w-48 max-w-xs sm:max-w-full select-none pointer-events-none"
+            className="w-36 sm:w-48 max-w-[150px] sm:max-w-full select-none pointer-events-none"
             loading="lazy"
           />
         </section>
@@ -100,13 +100,14 @@ export default function HomePage() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             src="/library.png"
             alt="Library Screenshot"
-            className="w-3/4 sm:w-48 max-w-xs sm:max-w-full select-none pointer-events-none"
+            className="w-36 sm:w-48 max-w-[150px] sm:max-w-full select-none pointer-events-none"
             loading="lazy"
           />
         </section>
       ),
     },
   ];
+
 
   const handleDragEnd = (_: any, info: any) => {
     if (info.offset.x < -50 && page < pages.length - 1) setPage(page + 1);

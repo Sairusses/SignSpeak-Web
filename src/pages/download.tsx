@@ -74,11 +74,11 @@ export default function DownloadPage() {
           Watch how SignSpeak recognizes hand gestures using AI and converts
           them into spoken or written words in English and Tagalog.
         </p>
-        <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-md bg-gray-100">
+        <div className="relative w-full h-[250px] rounded-2xl overflow-hidden shadow-md bg-gray-100">
           {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
           <video
             controls
-            className="w-full h-full object-cover"
+            className="w-full h-full max-h-[150px]object-cover"
             src="/Signspeak_promo.mp4"
           />
         </div>

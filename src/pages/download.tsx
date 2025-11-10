@@ -36,15 +36,15 @@ export default function DownloadPage() {
         </p>
 
         {/* Phone Feature Preview Grid */}
-        <h2 className="text-3xl mt-10 font-semibold text-blue-600 mb-6">
+        <h2 className="text-3xl mt-10 font-semibold text-blue-600">
           See SignSpeak in Action
         </h2>
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
           {[
-            { file: "/public/sign_to_text.mp4", label: "Sign To Text" },
-            { file: "/public/text_to_sign.mp4", label: "Text To Sign" },
-            { file: "/public/sign_library.mp4", label: "Sign Library" },
-            { file: "/public/dark_mode.mp4", label: "Dark Mode UI" },
+            { file: "/sign_to_text.mp4", label: "Sign To Text" },
+            { file: "/text_to_sign.mp4", label: "Text To Sign" },
+            { file: "/sign_library.mp4", label: "Sign Library" },
+            { file: "/dark_mode.mp4", label: "Dark Mode UI" },
           ].map((item, index) => (
             <div key={index} className="flex flex-col items-center space-y-3">
               <div className="relative w-[180px] h-[360px] bg-black rounded-[2rem] shadow-xl border-[10px] border-black overflow-hidden">
@@ -65,15 +65,22 @@ export default function DownloadPage() {
         </div>
       </div>
 
+      <h2 className="text-3xl mt-15 font-semibold text-blue-600">
+        App Showcase
+      </h2>
       {/* Interactive Section */}
-      <div className="max-w-4xl mt-20 text-center">
+      <div className="max-w-4xl mt-6 text-center">
         <p className="text-gray-600 mb-8">
           Watch how SignSpeak recognizes hand gestures using AI and converts
           them into spoken or written words in English and Tagalog.
         </p>
         <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-md bg-gray-100">
           {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-          <video controls className="w-full h-full object-cover" src="" />
+          <video
+            controls
+            className="w-full h-full object-cover"
+            src="/Signspeak_promo.mp4"
+          />
         </div>
       </div>
 

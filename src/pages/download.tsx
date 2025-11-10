@@ -19,7 +19,14 @@ export default function DownloadPage() {
           color="primary"
           size="lg"
           startContent={<Download size={20} />}
-          onPress={() => window.open("/downloads/SignSpeak-Android.apk")}
+          onPress={() => {
+            const link = document.createElement("a");
+
+            link.href =
+              "https://drive.google.com/uc?export=download&id=1lCxWQde-bqvoj8_D5ZnLSr53-fZWNrAv";
+            link.download = "SignSpeak.apk";
+            link.click();
+          }}
         >
           Download APK
         </Button>
@@ -28,23 +35,38 @@ export default function DownloadPage() {
           Version 1.0.0 · Updated November 2025
         </p>
 
-        {/* Phone Preview */}
-        <div className="mt-12 relative w-full flex justify-center">
-          <div className="bg-gradient-to-tr from-blue-100 to-blue-50 p-6 rounded-3xl shadow-lg">
-            <img
-              alt="SignSpeak App Preview"
-              className="w-[250px] md:w-[300px] rounded-2xl shadow-md"
-              src=""
-            />
-          </div>
+        {/* Phone Feature Preview Grid */}
+        <h2 className="text-3xl mt-10 font-semibold text-blue-600 mb-6">
+          See SignSpeak in Action
+        </h2>
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
+          {[
+            { file: "/public/sign_to_text.mp4", label: "Sign To Text" },
+            { file: "/public/text_to_sign.mp4", label: "Text To Sign" },
+            { file: "/public/sign_library.mp4", label: "Sign Library" },
+            { file: "/public/dark_mode.mp4", label: "Dark Mode UI" },
+          ].map((item, index) => (
+            <div key={index} className="flex flex-col items-center space-y-3">
+              <div className="relative w-[180px] h-[360px] bg-black rounded-[2rem] shadow-xl border-[10px] border-black overflow-hidden">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-3 bg-black rounded-b-xl" />
+
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                  src={item.file}
+                />
+              </div>
+              <p className="text-blue-600 font-medium text-sm">{item.label}</p>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Interactive Section */}
       <div className="max-w-4xl mt-20 text-center">
-        <h2 className="text-3xl font-semibold text-blue-600 mb-6">
-          See SignSpeak in Action
-        </h2>
         <p className="text-gray-600 mb-8">
           Watch how SignSpeak recognizes hand gestures using AI and converts
           them into spoken or written words in English and Tagalog.
@@ -65,7 +87,14 @@ export default function DownloadPage() {
           color="primary"
           size="lg"
           startContent={<Download size={20} />}
-          onPress={() => window.open("/downloads/SignSpeak-Android.apk")}
+          onPress={() => {
+            const link = document.createElement("a");
+
+            link.href =
+              "https://drive.google.com/uc?export=download&id=1lCxWQde-bqvoj8_D5ZnLSr53-fZWNrAv";
+            link.download = "SignSpeak.apk";
+            link.click();
+          }}
         >
           Get SignSpeak for Android
         </Button>

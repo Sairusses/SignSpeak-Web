@@ -26,6 +26,7 @@
     "@heroui/use-theme": "2.1.10",
     "@react-aria/visually-hidden": "3.8.28",
     "@react-types/shared": "3.32.1",
+    "@supabase/supabase-js": "^2.90.1",
     "@tailwindcss/postcss": "4.1.11",
     "@tailwindcss/vite": "4.1.11",
     "clsx": "2.1.1",
@@ -33,7 +34,7 @@
     "lucide-react": "^0.553.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-router-dom": "6.23.0",
+    "react-router-dom": "^6.30.3",
     "tailwind-variants": "3.1.1",
     "tailwindcss": "4.1.11"
   },
@@ -47,7 +48,8 @@
     "@typescript-eslint/eslint-plugin": "8.31.1",
     "@typescript-eslint/parser": "8.31.1",
     "@vitejs/plugin-react": "4.7.0",
-    "eslint": "9.25.1",
+    "baseline-browser-mapping": "^2.9.14",
+    "eslint": "^9.39.2",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
@@ -60,7 +62,7 @@
     "postcss": "8.5.6",
     "prettier": "3.5.3",
     "typescript": "5.6.3",
-    "vite": "6.0.11",
+    "vite": "^6.4.1",
     "vite-tsconfig-paths": "5.1.4"
   }
 }

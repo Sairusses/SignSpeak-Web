@@ -23,13 +23,13 @@ export const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-3">
-          <Link to="/about">
+          <Link to="/sign-in">
             <Button
               className="font-medium text-gray-700 hover:text-blue-600 transition"
               radius="sm"
               variant="light"
             >
-              About
+              Sign In
             </Button>
           </Link>
           <Link to="/download">

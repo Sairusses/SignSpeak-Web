@@ -179,7 +179,7 @@ export default function SignUpPage() {
                 />
                 <button
                   aria-label={showPassword ? "Hide password" : "Show password"}
-                  className="absolute right-3 top-[46px] md:top-[54px] text-sm text-gray-500"
+                  className="absolute right-3 top-[32px] text-sm text-gray-500"
                   type="button"
                   onClick={() => setShowPassword((s) => !s)}
                 >

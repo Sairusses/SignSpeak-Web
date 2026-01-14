@@ -22,7 +22,7 @@ export default function SignInPage() {
       email,
       password,
     });
-
+//
     if (error) {
       setError(error.message);
     } else {

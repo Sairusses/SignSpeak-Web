@@ -58,7 +58,7 @@ export default function SignUpPage() {
       if (signUpError) {
         setError(signUpError.message);
       } else {
-        // TODO: where to go
+        // TODO: where to go hehe
         // If your Supabase project requires email confirmation, inform the user
         setSuccess(
           "Account created. Check your email to confirm your address, or sign in if confirmation is not required.",

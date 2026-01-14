@@ -54,6 +54,7 @@ export default function SignUpPage() {
           data: { full_name: fullName },
         },
       });
+      console.log(data);
 
       if (signUpError) {
         setError(signUpError.message);

@@ -4,12 +4,12 @@ import { supabase } from "@/lib/supabaseClient";
 import { Spinner } from "@heroui/react";
 
 import IndexPage from "@/pages/index";
-import DefaultLayout from "@/layouts/default.tsx";
-import UserAnalytics from "@/pages/user-dashboard.tsx";
-import AdminAnalytics from "@/pages/admin-dashboard.tsx";
-import SignInPage from "@/pages/sign-in.tsx";
-import SignUpPage from "@/pages/sign-up.tsx";
-import DownloadPage from "@/pages/download.tsx";
+import DefaultLayout from "@/layouts/default";
+import UserAnalytics from "@/pages/user-dashboard";
+import AdminAnalytics from "@/pages/admin-dashboard";
+import SignInPage from "@/pages/sign-in";
+import SignUpPage from "@/pages/sign-up";
+import DownloadPage from "@/pages/download";
 
 function App() {
   const [session, setSession] = useState<any>(null);
@@ -39,14 +39,13 @@ function App() {
     );
   }
 
-  // Helper variables for cleaner JSX
   const isLoggedIn = !!session;
   const isAdmin = session?.user?.id === adminID;
 
   return (
     <DefaultLayout>
       <Routes>
-        {/* LANDING PAGE LOGIC */}
+        {/* Landing Page */}
         <Route
           path="/"
           element={
@@ -60,17 +59,11 @@ function App() {
           }
         />
 
-        {/* AUTH PAGES */}
-        <Route
-          path="/sign-in"
-          element={!isLoggedIn ? <SignInPage /> : <Navigate to="/" replace />}
-        />
-        <Route
-          path="/sign-up"
-          element={!isLoggedIn ? <SignUpPage /> : <Navigate to="/" replace />}
-        />
+        {/* Auth Pages */}
+        <Route path="/sign-in" element={!isLoggedIn ? <SignInPage /> : <Navigate to="/" replace />} />
+        <Route path="/sign-up" element={!isLoggedIn ? <SignUpPage /> : <Navigate to="/" replace />} />
 
-        {/* USER DASHBOARD: Only for non-admin logged in users */}
+        {/* User Dashboard */}
         <Route
           path="/user-dashboard"
           element={
@@ -82,19 +75,13 @@ function App() {
           }
         />
 
-        {/* ADMIN DASHBOARD: Strict check for adminID */}
+        {/* Admin Dashboard */}
         <Route
           path="/admin-dashboard"
-          element={
-            isLoggedIn && isAdmin ? (
-              <AdminAnalytics />
-            ) : (
-              <Navigate to="/" replace />
-            )
-          }
+          element={isLoggedIn && isAdmin ? <AdminAnalytics /> : <Navigate to="/" replace />}
         />
 
-        <Route element={<DownloadPage />} path="/download" />
+        <Route path="/download" element={<DownloadPage />} />
       </Routes>
     </DefaultLayout>
   );
